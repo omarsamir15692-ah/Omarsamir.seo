@@ -1,0 +1,430 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عمر سمير | خبير ومستشار تحسين محركات البحث SEO</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        darkbg: '#0a0f1c', // Very dark navy
+                        primary: '#1e293b', // Slate 800
+                        accent: '#eab308', // Yellow/Gold
+                        accenthover: '#ca8a04',
+                        lightbg: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { scroll-behavior: smooth; }
+        .pattern-bg {
+            background-image: radial-gradient(#eab308 1px, transparent 1px);
+            background-size: 25px 25px;
+            opacity: 0.05;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card-hover:hover img.result-img {
+            transform: scale(1.05);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-lightbg text-slate-800 font-sans selection:bg-accent selection:text-darkbg">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-3xl font-black text-primary tracking-tight">عمر<span class="text-accent">.</span>سمير</span>
+                </div>
+                <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                    <a href="#about" class="text-slate-600 hover:text-accent font-bold transition-colors">من أنا</a>
+                    <a href="#clients" class="text-slate-600 hover:text-accent font-bold transition-colors">عملاؤنا</a>
+                    <a href="#services" class="text-slate-600 hover:text-accent font-bold transition-colors">الخدمات</a>
+                    <a href="#portfolio" class="text-slate-600 hover:text-accent font-bold transition-colors">قصص النجاح</a>
+                    <div class="flex items-center gap-4">
+                        <a href="tel:01152100055" class="text-darkbg font-bold flex items-center gap-2 hover:text-accent transition-colors" dir="ltr">
+                            <i class="fas fa-phone-alt text-accent"></i> 01152100055
+                        </a>
+                        <a href="#contact" class="bg-darkbg hover:bg-accent hover:text-darkbg text-white px-6 py-2.5 rounded-md font-bold transition-all duration-300 shadow-lg">تواصل معي</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center gap-4">
+                    <a href="tel:01152100055" class="text-accent text-xl"><i class="fas fa-phone-alt"></i></a>
+                    <button id="mobile-menu-btn" class="text-primary hover:text-accent text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-4 space-y-2 text-center">
+                <a href="#about" class="block px-3 py-3 text-lg font-bold text-slate-700 hover:text-accent">من أنا</a>
+                <a href="#clients" class="block px-3 py-3 text-lg font-bold text-slate-700 hover:text-accent">عملاؤنا</a>
+                <a href="#services" class="block px-3 py-3 text-lg font-bold text-slate-700 hover:text-accent">الخدمات</a>
+                <a href="#portfolio" class="block px-3 py-3 text-lg font-bold text-slate-700 hover:text-accent">قصص النجاح</a>
+                <a href="tel:01152100055" class="block px-3 py-3 text-lg font-bold text-darkbg border border-slate-200 rounded-md my-2" dir="ltr"><i class="fas fa-phone-alt text-accent mr-2"></i> 01152100055</a>
+                <a href="#contact" class="block px-3 py-3 mt-2 text-lg font-bold bg-accent text-darkbg rounded-md">راسلني الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-darkbg overflow-hidden">
+        <div class="absolute inset-0 pattern-bg z-0"></div>
+        <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-20 z-0 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
+                
+                <!-- Text Content -->
+                <div class="w-full lg:w-3/5 text-center lg:text-right fade-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel text-accent font-bold rounded-full mb-6 text-sm">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        خبير السيو وتصدر نتائج البحث (SEO Expert)
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+                        تصدر الصفحة الأولى في جوجل مع <span class="text-accent">عمر سمير</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        سواء كان لديك متجر إلكتروني، عيادة طبية، أو شركة خدمات استشارية، أضع بين يديك استراتيجيات SEO مخصصة تضمن لك تصدر الكلمات عالية التنافسية ومضاعفة المبيعات.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/201152100055" target="_blank" class="bg-accent hover:bg-accenthover text-darkbg px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center flex items-center justify-center gap-3">
+                            <i class="fab fa-whatsapp text-2xl"></i> تواصل معي عبر واتساب
+                        </a>
+                        <a href="#portfolio" class="bg-transparent border-2 border-slate-600 hover:border-white text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center">
+                            شاهد قصص النجاح
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="w-full lg:w-2/5 flex justify-center lg:justify-end fade-up">
+                    <div class="relative group">
+                        <div class="absolute inset-0 border-2 border-accent translate-x-4 translate-y-4 rounded-2xl z-0 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                        <img src="https://i.postimg.cc/02Tv5NBW/IMG-1603.jpg" alt="عمر سمير - مستشار سيو" class="relative z-10 w-64 h-80 md:w-80 md:h-[400px] object-cover rounded-2xl shadow-2xl">
+                        
+                        <div class="absolute -bottom-6 -left-6 z-20 bg-white p-4 rounded-xl shadow-xl border-l-4 border-accent hidden md:flex items-center gap-4">
+                            <div class="bg-accent/20 p-3 rounded-full text-accent text-2xl">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-bold mb-1">نتائج حقيقية</p>
+                                <p class="text-xl font-black text-darkbg">في أشرس المجالات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- المميز: قسم شركاء النجاح (اللوجوهات الفردية) -->
+    <section id="clients" class="py-20 bg-gradient-to-b from-white to-slate-50 border-b border-slate-100 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
+            <div class="inline-flex items-center gap-3 px-6 py-2 bg-slate-50 rounded-full border border-slate-200 mb-12">
+                <i class="fas fa-handshake text-accent text-xl"></i>
+                <h3 class="text-lg font-bold text-slate-700 tracking-wider">علامات تجارية نثق بها وتثق بنا</h3>
+            </div>
+            
+            <!-- شبكة اللوجوهات الاحترافية -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                
+                <!-- Logo 1: الكرمة -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/HW5KdtbV/IMG-0788.jpg" alt="مركز الكرمة للعلاج الطبيعي" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+                <!-- Logo 2: Egy Marks -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/Z5YDPt2p/IMG-0787.jpg" alt="Egy Marks" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+                <!-- Logo 3: د. محمد الفولي -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/prYq8qBj/IMG-0786.jpg" alt="دكتور محمد الفولي" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+                <!-- Logo 4: شركة نقليات -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/vHbPMwQX/IMG-0785.webp" alt="شركة نقليات" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+                <!-- Logo 5: ايمجرايشن للهجرة -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/9f6pnv8Z/IMG-0784.jpg" alt="ايمجرايشن للهجرة" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+                <!-- Logo 6: BMC Training -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/9FmBKPbh/IMG-0783.png" alt="BMC Training" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+                <!-- Logo 7: عيادة الجمل -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/1t0pY4NP/IMG-0782.webp" alt="عيادة الجمل" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+                <!-- Logo 8: الخواجة للأقمشة (تم التحديث للصورة الأوضح) -->
+                <div class="group bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-accent border border-slate-100 transition-all duration-300 flex items-center justify-center h-28 cursor-pointer">
+                    <img src="https://i.postimg.cc/MZPcZyxZ/IMG-0789.jpg" alt="الخواجة للأقمشة" class="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-black text-darkbg mb-4">باقات وخدمات السيو الاحترافية</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-accent hover:shadow-xl transition-all duration-300 fade-up">
+                    <div class="w-14 h-14 bg-darkbg text-accent rounded-xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkbg mb-3">سيو المتاجر الإلكترونية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">تحسين صفحات الأقسام والمنتجات لتصدر نتائج البحث في الكلمات الشرائية، وزيادة المبيعات المباشرة لمختلف أنواع المتاجر.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-accent hover:shadow-xl transition-all duration-300 fade-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-darkbg text-accent rounded-xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkbg mb-3">السيو الطبي (للعيادات والمستشفيات)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">استراتيجيات قوية لتصدر الكلمات التنافسية في المجال الطبي مثل عمليات التجميل وجراحات السمنة لجذب المرضى المستهدفين.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-accent hover:shadow-xl transition-all duration-300 fade-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-darkbg text-accent rounded-xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkbg mb-3">سيو الشركات والخدمات (B2B)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">السيطرة على الكلمات المتعلقة بتأسيس الشركات، الاستشارات، والتدريب الدولي لجلب عملاء ذوي قيمة عالية لشركتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-accent font-bold tracking-wider text-sm uppercase bg-darkbg px-4 py-1.5 rounded-full inline-block mb-4">قصص نجاح موثقة</span>
+                <h2 class="text-4xl font-black text-darkbg mb-4">تصدر فعلي في أشرس المجالات</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">لقطات شاشة (Screenshots) حقيقية من نتائج بحث جوجل تثبت قوة الاستراتيجيات التي أعتمد عليها في مجالات شديدة التنافسية.</p>
+            </div>
+
+            <div class="space-y-16">
+                
+                <!-- Category 1: E-commerce -->
+                <div class="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-full bg-accent text-darkbg flex items-center justify-center text-xl shadow-lg"><i class="fas fa-shopping-cart"></i></div>
+                        <h3 class="text-3xl font-bold text-darkbg">المتاجر الإلكترونية (مجال المفروشات والستائر)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 card-hover group flex flex-col">
+                            <h4 class="font-bold text-lg mb-3 text-darkbg border-b border-slate-100 pb-2">الكلمة: "ستائر اطفال"</h4>
+                            <div class="h-48 overflow-hidden rounded-lg bg-slate-50 mb-4 relative flex items-center justify-center p-2">
+                                <img src="https://i.postimg.cc/YC0F7bTv/f049b3b5-90c8-4792-8a8f-7139f39c8b9c.jpg" alt="سيو ستائر أطفال" class="w-full h-full object-contain transition-transform duration-500 mix-blend-multiply result-img">
+                            </div>
+                            <p class="text-sm text-slate-500">تصدر النتيجة لموقع "الخواجة" في كلمة ذات منافسة شديدة (KD: 59%).</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 card-hover group flex flex-col">
+                            <h4 class="font-bold text-lg mb-3 text-darkbg border-b border-slate-100 pb-2">الكلمة: "ستائر البلاك اوت"</h4>
+                            <div class="h-48 overflow-hidden rounded-lg bg-slate-50 mb-4 relative flex items-center justify-center p-2">
+                                <img src="https://i.postimg.cc/L85PSNGn/9824c1cf-0a39-4bef-bbdd-a2ef0fa8a420.jpg" alt="سيو ستائر البلاك اوت" class="w-full h-full object-contain transition-transform duration-500 mix-blend-multiply result-img">
+                            </div>
+                            <p class="text-sm text-slate-500">الظهور في النتائج الأولى بكلمة شرائية هامة جداً لأي متجر مفروشات.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 card-hover group flex flex-col">
+                            <h4 class="font-bold text-lg mb-3 text-darkbg border-b border-slate-100 pb-2">الكلمة: "ستائر مودرن رصاصي"</h4>
+                            <div class="h-48 overflow-hidden rounded-lg bg-slate-50 mb-4 relative flex items-center justify-center p-2">
+                                <img src="https://i.postimg.cc/jS2fTZB2/a050e781-6d21-4052-a523-ef7aade3f0c5.jpg" alt="سيو ستائر مودرن" class="w-full h-full object-contain transition-transform duration-500 mix-blend-multiply result-img">
+                            </div>
+                            <p class="text-sm text-slate-500">السيطرة على الكلمات ذات الذيل الطويل (Long-tail keywords) لجلب عميل جاهز للشراء.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Medical SEO -->
+                <div class="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-xl shadow-lg"><i class="fas fa-heartbeat"></i></div>
+                        <h3 class="text-3xl font-bold text-darkbg">المجال الطبي (التجميل وجراحات السمنة)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 card-hover group">
+                            <div class="h-64 overflow-hidden rounded-lg bg-slate-50 mb-4 relative flex items-center justify-center p-2">
+                                <img src="https://i.postimg.cc/4NJtLJ51/IMG-0773.jpg" alt="سيو طبي التكميم والتجميل" class="w-full h-full object-contain transition-transform duration-500 mix-blend-multiply result-img">
+                            </div>
+                            <h4 class="font-bold text-xl mb-2">الكلمات: "عملية التكميم المعدل" / "أسعار عمليات التجميل"</h4>
+                            <p class="text-slate-500">الوصول للمراتب الأولى للعيادات والأطباء، مما يضمن تدفقاً مستمراً للمرضى المستهدفين.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-center">
+                            <h4 class="font-bold text-2xl mb-4 text-darkbg">لماذا السيو الطبي مع عمر سمير؟</h4>
+                            <ul class="space-y-4 text-slate-600">
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> استهداف دقيق للمرضى الذين يبحثون بنية إجراء عمليات.</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> كتابة محتوى طبي متوافق مع معايير YMYL الخاصة بجوجل.</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> التغلب على منصات الحجز الكبرى في نتائج البحث المحلية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Corporate & Legal Setup -->
+                <div class="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-xl shadow-lg"><i class="fas fa-briefcase"></i></div>
+                        <h3 class="text-3xl font-bold text-darkbg">الخدمات القانونية وتأسيس الشركات (B2B)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 card-hover group">
+                            <div class="h-64 overflow-hidden rounded-lg bg-slate-50 mb-4 relative flex items-center justify-center p-2">
+                                <img src="https://i.postimg.cc/CLm89WrK/IMG-0775.jpg" alt="تأسيس شركة وتسجيل علامة" class="w-full h-full object-contain transition-transform duration-500 mix-blend-multiply result-img">
+                            </div>
+                            <h4 class="font-bold text-xl mb-2">الكلمات: "تأسيس شركة" / "تسجيل العلامة التجارية"</h4>
+                            <p class="text-slate-500">تصدر قوي لشركة EgyMarks في كلمات بحث تعد من الأغلى سعراً في الإعلانات، مما يوفر آلاف الدولارات شهرياً ويجلب عملاء B2B.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-center">
+                            <h4 class="font-bold text-2xl mb-4 text-darkbg">أهمية السيو لشركات الـ B2B</h4>
+                            <p class="text-slate-600 mb-4">في مجالات الخدمات والأعمال، العميل يثق دائماً في النتيجة العضوية (Organic) أكثر من الإعلان الممول، وتصدرك لهذه النتائج يبني مصداقية هائلة لشركتك أمام كبار المستثمرين والعملاء.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: International Training Courses -->
+                <div class="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-xl shadow-lg"><i class="fas fa-globe"></i></div>
+                        <h3 class="text-3xl font-bold text-darkbg">سيو عالمي: التدريب والكورسات (Global SEO)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 card-hover group md:col-span-2 lg:w-3/4 mx-auto">
+                            <div class="h-72 overflow-hidden rounded-lg bg-slate-50 mb-4 relative flex items-center justify-center p-2">
+                                <img src="https://i.postimg.cc/RVXt2jpF/IMG-0772.jpg" alt="كورسات دولية" class="w-full h-full object-contain transition-transform duration-500 mix-blend-multiply result-img">
+                            </div>
+                            <h4 class="font-bold text-xl mb-2 text-center">الكلمات: "HR training courses" / "Training in Italy"</h4>
+                            <p class="text-slate-500 text-center">تصدر على مستوى العالم وفي دول أجنبية باللغة الإنجليزية لشركات التدريب المرموقة للوصول إلى المتدربين من كافة الجنسيات.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="py-24 bg-darkbg text-white relative overflow-hidden border-t-4 border-accent">
+        <div class="absolute inset-0 pattern-bg z-0 opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 fade-up">
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-6">احصل على استشارة SEO <span class="text-accent">مجانية</span> لموقعك</h2>
+            <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">لنتحدث حول كيف يمكننا تطبيق نفس الاستراتيجيات الناجحة للسيطرة على نتائج البحث في مجالك وزيادة عوائدك.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="tel:01152100055" class="w-full sm:w-auto bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-darkbg font-bold text-2xl py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-accent/20" dir="ltr">
+                    <i class="fas fa-phone-alt"></i> 01152100055
+                </a>
+                
+                <a href="https://wa.me/201152100055" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold text-2xl py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-green-500/20">
+                    <i class="fab fa-whatsapp"></i> تواصل واتسـاب
+                </a>
+            </div>
+            
+            <p class="mt-8 text-slate-500 text-sm">متاح للرد على استفساراتكم طوال أيام الأسبوع.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#05080f] text-slate-500 py-8 text-center border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-xl font-black text-white">عمر<span class="text-accent">.</span>سمير</div>
+            <p class="font-bold text-sm">© 2024 جميع الحقوق محفوظة - خبير SEO.</p>
+            <div class="flex gap-4">
+                <a href="tel:01152100055" class="hover:text-accent transition-colors text-xl"><i class="fas fa-phone"></i></a>
+                <a href="https://wa.me/201152100055" class="hover:text-accent transition-colors text-xl"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        
+        // Sticky Navbar styling on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+```
