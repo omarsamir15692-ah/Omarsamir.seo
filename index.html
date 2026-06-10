@@ -338,50 +338,103 @@
             </div>
         </div>
     </section>
-
-    <section id="blog" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+ <section id="blog" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-up">
                 <span class="text-accent font-bold tracking-wider text-sm uppercase bg-darkbg px-4 py-1.5 rounded-full inline-block mb-4">المدونة المعرفية</span>
                 <h2 class="text-3xl md:text-4xl font-black text-darkbg mb-4">رؤى وأفكار في نمو الأعمال</h2>
                 <div class="w-20 h-1 bg-accent mx-auto"></div>
             </div>
 
-            <div class="bg-slate-50 border border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 fade-up">
-                <div class="flex flex-wrap items-center gap-4 mb-6 text-sm">
-                    <span class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-full"><i class="fas fa-fire mr-1"></i> استراتيجيات SEO</span>
-                    <span class="text-slate-400 font-bold flex items-center gap-1"><i class="far fa-clock"></i> قراءة في 3 دقائق</span>
-                </div>
-                
-                <h3 class="text-2xl md:text-3xl font-black text-darkbg mb-6 leading-tight hover:text-accent transition-colors cursor-pointer">
-                    لماذا تفشل أغلب المواقع في تصدر نتائج البحث؟ وكيف تتجنب ذلك؟
-                </h3>
-                
-                <div class="text-slate-650 leading-relaxed space-y-4 md:text-lg">
-                    <p>
-                        في عالم الأعمال الرقمية اليوم، يظن الكثيرون أن إنشاء موقع إلكتروني جذاب وتعبئته بالمنتجات أو الخدمات كافٍ لجلب العملاء. لكن الحقيقة الصادمة أن أكثر من <strong>90% من صفحات الويب لا تحصل على أي زيارات مجانية</strong> من محرك بحث جوجل.
-                    </p>
-                    <p class="font-bold text-darkbg text-xl pt-2 border-r-4 border-accent pr-3">
-                        السبب الرئيسي: غياب فهم "نية الباحث" (Search Intent).
-                    </p>
-                    <p>
-                        محرك البحث جوجل لم يعد مجرد أداة تربط الكلمات ببعضها، بل أصبح نظاماً ذكياً يفهم ماذا يريد العميل بالضبط. عندما يبحث العميل عن "عملية التكميم المعدل" أو "ستائر أطفال مودرن"، فهو لا يبحث عن مقال إنشائي طويل، بل يبحث عن إجابة دقيقة، أسعار واضحة، وتجربة تصفح سريعة ومريحة تمنحه الثقة الكاملة للاتخاذ القرار.
-                    </p>
-                    <p>
-                        النجاح في السيو اليوم يتطلب بناء استراتيجية محتوى متكاملة ترتكز على تقديم قيمة حقيقية وسرعة فائقة للموقع (Core Web Vitals). هذا هو الفارق الجوهري بين موقع يكتفي بالظهور، وموقع آخر يسيطر على الكلمات الشرائية ويحول الزوار إلى مبيعات وأرباح مستدامة.
-                    </p>
-                </div>
-                
-                <div class="mt-8 pt-6 border-t border-slate-200 flex items-center gap-4">
-                    <img src="https://i.postimg.cc/02Tv5NBW/IMG-1603.jpg" alt="عمر سمير" class="w-12 h-12 rounded-full object-cover border-2 border-accent">
-                    <div>
-                        <p class="font-bold text-darkbg text-sm">بقلم: عمر سمير</p>
-                        <p class="text-xs text-slate-400 font-semibold">مستشار سيو ومدير استراتيجيات المحتوى</p>
+            <!-- شبكة المقالات (Grid) لعرض أكثر من مقالة -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- المقالة الأولى (الجديدة: تسويق العيادات) -->
+                <article class="bg-slate-50 border border-slate-100 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 fade-up h-full flex flex-col">
+                    <div class="flex flex-wrap items-center gap-4 mb-4 text-sm">
+                        <span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full"><i class="fas fa-stethoscope mr-1"></i> السيو الطبي</span>
+                        <span class="text-slate-400 font-bold flex items-center gap-1"><i class="far fa-clock"></i> قراءة في 4 دقائق</span>
                     </div>
-                </div>
+                    
+                    <h3 class="text-2xl font-black text-darkbg mb-4 leading-tight hover:text-accent transition-colors">
+                        كيفية تسويق العيادات الطبية على جوجل: دليلك لتصدر النتائج وجذب المرضى
+                    </h3>
+                    
+                    <div class="text-slate-600 leading-relaxed space-y-4 mb-8 flex-grow">
+                        <p>
+                            هل تساءلت يوماً لماذا تظهر عيادات منافسيك دائماً في النتائج الأولى عندما يبحث مريض عن "أفضل دكتور أسنان" أو "تكلفة عملية التكميم"؟ السر ليس في حجم العيادة، بل في استراتيجية <strong>تسويق العيادات الطبية على جوجل</strong> بشكل صحيح.
+                        </p>
+                        
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm my-4">
+                            <h4 class="font-bold text-darkbg mb-3 flex items-center gap-2">
+                                <i class="fas fa-magic text-accent"></i> 3 خطوات لنجاح تسويق العيادات الطبية على جوجل (SEO):
+                            </h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-green-500 mt-1"></i> 
+                                    <span><strong>تحسين السيو المحلي (Local SEO):</strong> تحسين ملف (Google Business Profile) لتتصدر خرائط جوجل (Google Maps) في نطاقك الجغرافي.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-green-500 mt-1"></i> 
+                                    <span><strong>الكلمات المفتاحية العلاجية:</strong> استهداف نية المريض الدقيقة (مثال: "حجز موعد عيادة جلدية" وليس فقط "جلدية").</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-green-500 mt-1"></i> 
+                                    <span><strong>محتوى YMYL الموثوق:</strong> محركات البحث وخصوصاً (AI) تدقق بشدة في المحتوى الطبي؛ يجب أن يُكتب بمعايير (E-E-A-T) لبناء ثقة محرك البحث والمريض معاً.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p>
+                            الاعتماد على الإعلانات الممولة فقط مكلف جداً في المجال الطبي. الاستثمار في الـ SEO يضمن لك تدفقاً مستمراً من المرضى الجدد وبناء سمعة رقمية (Digital Authority) لا يمكن للمنافسين شراؤها.
+                        </p>
+                    </div>
+                    
+                    <div class="pt-6 border-t border-slate-200 flex items-center gap-4 mt-auto">
+                        <img src="https://i.postimg.cc/02Tv5NBW/IMG-1603.jpg" alt="عمر سمير" class="w-10 h-10 rounded-full object-cover border-2 border-accent">
+                        <div>
+                            <p class="font-bold text-darkbg text-sm">عمر سمير</p>
+                            <p class="text-xs text-slate-400 font-semibold">مستشار السيو الطبي</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- المقالة الثانية (القديمة) -->
+                <article class="bg-slate-50 border border-slate-100 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 fade-up h-full flex flex-col" style="transition-delay: 100ms;">
+                    <div class="flex flex-wrap items-center gap-4 mb-4 text-sm">
+                        <span class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-full"><i class="fas fa-fire mr-1"></i> استراتيجيات SEO</span>
+                        <span class="text-slate-400 font-bold flex items-center gap-1"><i class="far fa-clock"></i> قراءة في 3 دقائق</span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-black text-darkbg mb-4 leading-tight hover:text-accent transition-colors">
+                        لماذا تفشل أغلب المواقع في تصدر نتائج البحث؟ وكيف تتجنب ذلك؟
+                    </h3>
+                    
+                    <div class="text-slate-600 leading-relaxed space-y-4 mb-8 flex-grow">
+                        <p>
+                            في عالم الأعمال الرقمية اليوم، يظن الكثيرون أن إنشاء موقع إلكتروني جذاب وتعبئته بالمنتجات أو الخدمات كافٍ لجلب العملاء. لكن الحقيقة الصادمة أن أكثر من <strong>90% من صفحات الويب لا تحصل على أي زيارات مجانية</strong> من محرك بحث جوجل.
+                        </p>
+                        <p class="font-bold text-darkbg text-lg py-2 border-r-4 border-accent pr-3 bg-white/50 rounded-l-lg my-3">
+                            السبب الرئيسي: غياب فهم "نية الباحث" (Search Intent).
+                        </p>
+                        <p>
+                            محرك البحث لم يعد يربط الكلمات ببعضها، بل أصبح نظاماً ذكياً يفهم ماذا يريد العميل. عندما يبحث عميل عن خدمة معينة، فهو لا يبحث عن مقال إنشائي، بل إجابة دقيقة وتجربة تصفح سريعة تمنحه الثقة. النجاح في السيو اليوم يتطلب بناء استراتيجية محتوى ترتكز على تقديم قيمة حقيقية وسرعة فائقة للموقع.
+                        </p>
+                    </div>
+                    
+                    <div class="pt-6 border-t border-slate-200 flex items-center gap-4 mt-auto">
+                        <img src="https://i.postimg.cc/02Tv5NBW/IMG-1603.jpg" alt="عمر سمير" class="w-10 h-10 rounded-full object-cover border-2 border-accent">
+                        <div>
+                            <p class="font-bold text-darkbg text-sm">عمر سمير</p>
+                            <p class="text-xs text-slate-400 font-semibold">مستشار سيو</p>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
+
 
     <section id="contact" class="py-24 bg-darkbg text-white relative overflow-hidden border-t-4 border-accent">
         <div class="absolute inset-0 pattern-bg z-0 opacity-10"></div>
