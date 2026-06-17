@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omar-samir-seo-jn4v.vercel.app/sitemap.xml
