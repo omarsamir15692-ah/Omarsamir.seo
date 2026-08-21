@@ -31,3 +31,10 @@
         <priority>0.8</priority>
     </url>
 </urlset>
+
+<!-- مقالة نقل الأثاث -->
+    <url>
+        <loc>https://omar-samir-seo-jn4v.vercel.app/logistics-seo-article.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
