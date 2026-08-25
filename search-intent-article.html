@@ -25,6 +25,46 @@
             }
         }
     </script>
+<!-- الكود السحري لتحويل الموقع بالكامل للأبيض والأزرق (Light Theme) -->
+    <style>
+        /* تحويل الخلفيات الداكنة لبيضاء مريحة للعين */
+        body, .bg-darkbg, .bg-slate-900, .bg-slate-950, footer {
+            background-color: #f8fafc !important; /* أبيض ساطع */
+        }
+        
+        /* تحويل النصوص البيضاء لكحلي داكن عشان تبان على الأبيض */
+        h1, h2, h3, h4, h5, h6, .text-white {
+            color: #0f172a !important; 
+        }
+        
+        /* تحويل النصوص الرمادية لرمادي داكن للقراءة براحة */
+        p, span, .text-slate-300, .text-slate-400 {
+            color: #334155 !important;
+        }
+        
+        /* تحويل اللون المميز (الذهبي/الأصفر القديم) للأزرق الملكي */
+        .text-accent, .text-yellow-400, .text-yellow-500, i.fas, i.fab {
+            color: #2563eb !important; /* أزرق ملكي */
+        }
+        
+        /* تحويل زراير الأكشن للأزرق الملكي مع نص أبيض */
+        .bg-accent, .bg-yellow-400, .bg-yellow-500 {
+            background-color: #2563eb !important;
+            color: #ffffff !important; 
+        }
+        
+        /* تظبيط الباجات والبوكسات الشفافة للون اللبني الفاتح */
+        .glass-panel, .bg-slate-800\/50, .border-slate-700 {
+            background-color: #eff6ff !important; /* لبني هادي جداً */
+            border-color: #bfdbfe !important; /* إطار أزرق فاتح */
+        }
+        
+        /* عكس ألوان القائمة العلوية Navbar لتليق مع الأبيض */
+        nav {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+        }
+    </style>
 </head>
 <body class="bg-lightbg text-slate-800 font-sans antialiased">
 
